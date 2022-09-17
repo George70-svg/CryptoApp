@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <h1>CryptoApp</h1>
-  </div>
+  <crypto-page />
+  <router-view />
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import CryptoPage from '@/views/crypto/CryptoPage.vue'
 
+export default {
+  name: 'App',
+  components: { CryptoPage },
+  setup() {
+    return {
+
+    }
+  },
+}
 </script>
 
 <style scoped lang="scss">

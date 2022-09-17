@@ -6,17 +6,49 @@
     "node": true
   },
   "extends": [
-    "plugin:vue/vue3-recommended",
     "airbnb-base",
-    "@vue/typescript/recommended"
+    "plugin:vue/vue3-recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
   "parserOptions": {
     "ecmaVersion": 2021
   },
-  "plugins": [
-  ],
+  "plugins": [ "@typescript-eslint", "import" ],
   "rules": {
     "semi": ["error", "never"],
-    "no-var": "error"
+    "no-var": "error",
+    "linebreak-style": ["off", "windows"],
+    "no-undef": "off",
+    "indent": "off",
+    "vue/no-mutating-props": "warn",
+    "vue/script-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 0,
+        "switchCase": 1
+      }
+    ],
+    "vue/require-v-for-key": "off",
+    "vue/valid-v-for": "off",
+    "vue/no-template-key": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/no-v-text-v-html-on-component": "off",
+    "vue/prefer-import-from-vue": "off",
+    "vue/valid-attribute-name": "off",
+    "vue/singleline-html-element-content-newline": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map": [["@", "./src/"]],
+        "extensions": [".js", ".vue"]
+      }
+    }
   }
 }
