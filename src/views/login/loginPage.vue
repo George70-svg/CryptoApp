@@ -2,19 +2,36 @@
   <div class="login-container">
 
     <div class="login">
-      <div class="logo">
-        <img src="src/assets/icons/rocket.png" alt="rocket logo">
+      <div class="logo-container">
+        <img src="src/assets/icons/rocket.png" alt="rocket logo" draggable="false">
         <h1>CryptoApp</h1>
       </div>
 
       <div class="form-container">
-        <input type="text">
-        <br>
-        <input type="text">
-        <br>
-        <button>
+        <a-input
+          v-model="login"
+          size="large"
+          class="input"
+          placeholder="Login"
+        />
+
+        <a-input-password
+          v-model="password"
+          size="large"
+          class="input"
+          placeholder="Password"
+        />
+      </div>
+
+      <div class="button-container">
+        <a-button
+          type="primary"
+          size="large"
+          class="login-button"
+          :disabled="false"
+        >
           <router-link to="/crypto">Войти</router-link>
-        </button>
+        </a-button>
       </div>
     </div>
 
@@ -22,8 +39,19 @@
 </template>
 
 <script lang="ts">
+import { ref } from 'vue'
+
 export default {
   name: 'LoginPage',
+  components: {},
+  setup() {
+    const login = ref<string>('')
+    const password = ref<string>('')
+    return {
+      login,
+      password,
+    }
+  },
 }
 </script>
 
@@ -50,9 +78,9 @@ export default {
     justify-content: center;
 
     background-color: rgba(var(--background-light-color-with-opacity), var(--alpha));
-    border-radius: 25px;
+    border-radius: 15px;
 
-    .logo {
+    .logo-container {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -75,12 +103,21 @@ export default {
       justify-content: center;
       align-items: center;
 
-      input {
-
+      .input {
+        height: 60px;
+        max-width: 400px;
+        margin: 1rem;
+        box-shadow: var(--primary-shadow);
       }
+    }
 
-      button {
+    .button-container {
+      text-align: center;
+      margin-bottom: 4rem;
 
+      .login-button {
+        width: 200px;
+        padding: 0;
       }
     }
   }
@@ -102,7 +139,7 @@ export default {
       background-color: inherit;
       border-radius: 0;
 
-      .logo {
+      .logo-container {
         margin: 0;
 
         img {
@@ -118,11 +155,14 @@ export default {
       .form-container {
         flex-grow: 0;
 
-        input {
+        .input {
 
         }
+      }
 
-        button {
+      .button-container {
+
+        .login-button {
 
         }
       }

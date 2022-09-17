@@ -22,6 +22,7 @@
     "linebreak-style": ["off", "windows"],
     "no-undef": "off",
     "indent": "off",
+    "space-infix-ops": "off",
     "vue/no-mutating-props": "warn",
     "vue/script-indent": [
       "error",
