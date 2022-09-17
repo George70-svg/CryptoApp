@@ -4,8 +4,8 @@
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  color: var(--primary-text-color);
+  background-color: var(--grey-100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -41,20 +41,25 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 48px;
+  font-weight: bold;
   line-height: 1.1;
 }
 
 :root {
   --primary-color: hsl(202deg, 91%, 13%);
+  --primary-text-color: #526581;
+  --secondary-text-color: var(--grey-900);
+  --thirtry-text-color: var(--grey-800);
 }
 
 
 :root {
-  --blue: hsl(200deg 66% 86%);
-  --yellow: hsl(45deg 100% 58%);
-  --red: hsl(0deg 65% 51%);
-  --green: hsl(120deg 39% 54%);
+  --white: rgb(255, 255, 255);
+  --blue: #007AFF;
+  --yellow: #F8D96D;
+  --red: #ED3D3D;
+  --green: #7DD76F;
   --color-grey-dark-1: hsl(202deg 91% 13%);
   --color-grey-dark-2: hsl(209deg 29% 41%);
   --grey-100: hsl(0deg 0% 96%);
@@ -66,4 +71,13 @@ h1 {
   --grey-700: hsl(0deg 0% 38%);
   --grey-800: hsl(0deg 0% 26%);
   --grey-900: hsl(0deg 0% 13%)
+}
+
+:root {
+  --background-light-color-with-opacity: 240, 240, 240;
+  --background-light-color-: var(--grey-100);
+}
+
+:root {
+  --alpha: .5;
 }
