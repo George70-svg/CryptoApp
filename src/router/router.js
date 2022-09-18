@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import LoginPage from '@/views/login/loginPage.vue'
+import LoginPage from '@/views/login/LoginPage.vue'
 import CryptoPage from '@/views/crypto/CryptoPage.vue'
 
 const history = createWebHistory()

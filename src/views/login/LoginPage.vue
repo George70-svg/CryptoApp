@@ -30,7 +30,7 @@
           class="login-button"
           :disabled="false"
         >
-          <router-link to="/crypto">Войти</router-link>
+          <router-link to="/crypto">Sign in</router-link>
         </a-button>
       </div>
     </div>
@@ -118,6 +118,7 @@ export default {
       .login-button {
         width: 200px;
         padding: 0;
+        box-shadow: var(--primary-shadow);
       }
     }
   }

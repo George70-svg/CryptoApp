@@ -56,7 +56,8 @@ h1 {
 
 :root {
   --white: rgb(255, 255, 255);
-  --blue: #007AFF;
+  --blue: #1890FF;
+  --light-blue: #40A9FF;
   --yellow: #F8D96D;
   --red: #ED3D3D;
   --green: #7DD76F;
