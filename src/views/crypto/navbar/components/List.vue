@@ -1,17 +1,26 @@
 <template>
   <div class="list-container">
-    <list-item />
-    <list-item />
-    <list-item />
+    <tokens :listItemMax="navbarListMax"/>
+    <portfolio :listItemMax="navbarListMax"/>
+    <statistics :listItemMax="navbarListMax"/>
   </div>
 </template>
+statistics
 
-<script>
-import ListItem from './ListItem.vue'
+<script lang="ts">
+import Tokens from "@/views/crypto/navbar/components/Tokens.vue"
+import Portfolio from "@/views/crypto/navbar/components/Portfolio.vue"
+import Statistics from "@/views/crypto/navbar/components/Statistics.vue";
 
 export default {
   name: 'List',
-  components: { ListItem },
+  components: {Statistics, Portfolio, Tokens},
+  props: {
+    navbarListMax: {
+      type: Boolean,
+      required: true
+    }
+  }
 }
 </script>
 

@@ -1,25 +1,36 @@
 <template>
   <div class="navBar-container">
-
-    <div class="navBar">
-
-      <logo />
-      <list />
-      <user />
-
+    <div
+        class="navBar"
+        :class="navbarContainerMax ? 'navBar-max' : 'navBar-min'"
+    >
+      <logo @toggleNavbar="toggleNavbar"/>
+      <list :navbarListMax="navbarContainerMax"/>
+      <user :navbarUserMax="navbarContainerMax"/>
     </div>
-
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Logo from './components/Logo.vue'
 import List from './components/List.vue'
 import User from './components/User.vue'
+import {ref} from "vue";
 
 export default {
   name: 'NavBar',
   components: { User, List, Logo },
+  setup() {
+    const navbarContainerMax = ref<boolean>(true)
+    const toggleNavbar = () => {
+      navbarContainerMax.value = !navbarContainerMax.value
+    }
+
+    return {
+      navbarContainerMax,
+      toggleNavbar
+    }
+  }
 }
 </script>
 
@@ -40,6 +51,14 @@ export default {
     margin: 2rem 1rem 2rem 2rem;
     background-color: var(--white);
     border-radius: 20px;
+  }
+
+  .navBar-max {
+    width: 240px;
+  }
+
+  .navBar-min {
+    width: 80px;
   }
 }
 

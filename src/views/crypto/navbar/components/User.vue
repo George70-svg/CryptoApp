@@ -1,10 +1,13 @@
 <template>
-  <div class="user-container">
+  <div
+      class="user-container"
+      :class="navbarUserMax ? 'user-container-max' : 'user-container-min'"
+  >
     <div class="avatar">
-      <img src="src/assets/icons/rocket.png" alt="rocket logo" draggable="false">
+      <img src="src/assets/icons/avatar.jpg" alt="rocket logo" draggable="false">
     </div>
 
-    <div class="name">
+    <div v-if="navbarUserMax" class="name">
       <div class="user-name">Anton</div>
       <div class="email">syuraev.anton@gmail.com</div>
     </div>
@@ -22,6 +25,12 @@ import { LogoutOutlined } from '@ant-design/icons-vue'
 export default {
   name: 'User',
   components: { LogoutOutlined },
+  props: {
+    navbarUserMax: {
+      type: Boolean,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -40,6 +49,7 @@ export default {
 
     img {
       width: 40px;
+      border-radius: 50%;
     }
   }
 
@@ -60,6 +70,19 @@ export default {
   .logout-icon {
     font-size: 20px;
     color: var(--primary-text-color);
+  }
+}
+
+.user-container-max {
+  flex-direction: row;
+}
+
+.user-container-min {
+  flex-direction: column;
+  padding: 0.5rem;
+
+  .logout-icon {
+    margin-top: 0.5rem;
   }
 }
 

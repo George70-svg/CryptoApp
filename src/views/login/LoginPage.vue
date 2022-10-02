@@ -88,7 +88,6 @@ export default {
 
       img {
         width: 150px;
-        transform: rotate(-45deg);
       }
 
       h1 {

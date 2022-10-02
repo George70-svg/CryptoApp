@@ -1,24 +1,34 @@
 <template>
   <router-link active-class="active-item" to="/">
     <div class="listItem-container">
-      <home-outlined class="icon" />
-      <p>Tokens</p>
+      <PieChartOutlined
+          class="icon"
+          :class="listItemMax ? 'icon-max' : 'icon-min'"
+      />
+      <p v-if="listItemMax">Statistics</p>
     </div>
   </router-link>
 </template>
 
-<script>
-import { HomeOutlined } from '@ant-design/icons-vue'
+<script lang="ts">
+import { PieChartOutlined } from '@ant-design/icons-vue'
 
 export default {
-  name: 'ListItem',
-  components: { HomeOutlined },
+  name: 'Statistics',
+  components: { PieChartOutlined },
+  props: {
+    listItemMax: {
+      type: Boolean,
+      required: true
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
 .listItem-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -29,12 +39,22 @@ export default {
   transition: background-color .3s;
 
   .icon {
-    font-size: 20px;
+    font-size: 26px;
     color: var(--primary-text-color);
   }
 
+  .icon-max {
+
+  }
+
+  .icon-min {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--primary-text-color);
     margin: 0 0 0 1rem;
