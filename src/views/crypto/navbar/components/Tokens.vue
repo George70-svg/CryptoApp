@@ -1,5 +1,5 @@
 <template>
-  <router-link active-class="active-item" to="/">
+  <router-link active-class="active-item" to="tokens">
     <div class="listItem-container">
       <HomeOutlined
           class="icon"
@@ -36,7 +36,7 @@ export default {
   margin: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color .3s;
+  transition: background-color var(--default-transition);
 
   .icon {
     font-size: 26px;
@@ -62,7 +62,7 @@ export default {
 
   &:hover {
     background-color: var(--light-blue);
-    transition: background-color .3s;
+    transition: background-color var(--default-transition);
 
     .icon {
       color: var(--white);

@@ -45,7 +45,7 @@ export default {
   img {
     width: 80px;
     cursor: pointer;
-    transition: transform .3s;
+    transition: transform var(--default-transition);
   }
 
   h2 {
