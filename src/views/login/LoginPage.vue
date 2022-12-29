@@ -78,7 +78,7 @@ export default {
     justify-content: center;
 
     background-color: rgba(var(--background-light-color-with-opacity), var(--alpha));
-    border-radius: 15px;
+    border-radius: var(--b-radius-2);
 
     .logo-container {
       display: flex;

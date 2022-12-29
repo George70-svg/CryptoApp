@@ -34,7 +34,7 @@ export default {
   justify-content: start;
   padding: 0.6rem 1rem;
   margin: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: var(--b-radius-1);
   cursor: pointer;
   transition: background-color var(--default-transition);
 

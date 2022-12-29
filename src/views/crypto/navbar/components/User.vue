@@ -1,19 +1,19 @@
 <template>
   <div
-      class="user-container"
-      :class="navbarUserMax ? 'user-container-max' : 'user-container-min'"
+      class="userContainer"
+      :class="navbarUserMax ? 'userContainerMax' : 'userContainerMin'"
   >
     <div class="avatar">
       <img src="src/assets/icons/avatar.jpg" alt="rocket logo" draggable="false">
     </div>
 
     <div v-if="navbarUserMax" class="name">
-      <div class="user-name">Anton</div>
+      <div class="userName">Anton</div>
       <div class="email">syuraev.anton@gmail.com</div>
     </div>
 
     <router-link to="/">
-      <logout-outlined class="logout-icon" />
+      <logout-outlined class="logoutIcon" />
     </router-link>
 
   </div>
@@ -36,14 +36,14 @@ export default {
 
 <style lang="scss" scoped>
 
-.user-container {
+.userContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
   background-color: var(--grey-300);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: var(--b-radius-2);
+  border-bottom-right-radius: var(--b-radius-2);
 
   .avatar {
 
@@ -57,7 +57,7 @@ export default {
     flex-grow: 1;
     text-align: start;
 
-    .user-name {
+    .userName {
       font-size: 14px;
       font-weight: bold;
     }
@@ -67,21 +67,21 @@ export default {
     }
   }
 
-  .logout-icon {
+  .logoutIcon {
     font-size: 20px;
     color: var(--primary-text-color);
   }
 }
 
-.user-container-max {
+.userContainerMax {
   flex-direction: row;
 }
 
-.user-container-min {
+.userContainerMin {
   flex-direction: column;
   padding: 0.5rem;
 
-  .logout-icon {
+  .logoutIcon {
     margin-top: 0.5rem;
   }
 }

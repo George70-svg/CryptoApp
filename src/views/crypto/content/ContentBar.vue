@@ -1,5 +1,5 @@
 <template>
-  <div class="contentBar-container">
+  <div class="contentBarContainer">
 
     <div class="contentBar">
       <router-view
@@ -13,9 +13,10 @@
 </template>
 
 <script>
-import PortfolioPage from "@/views/crypto/content/PortfolioPage/PortfolioPage.vue";
-import StatisticsPage from "@/views/crypto/content/StatisticsPage/StatisticsPage.vue";
-import TokensPage from "@/views/crypto/content/TokensPage/TokensPage.vue";
+import PortfolioPage from "@/views/crypto/content/PortfolioPage/PortfolioPage.vue"
+import StatisticsPage from "@/views/crypto/content/StatisticsPage/StatisticsPage.vue"
+import TokensPage from "@/views/crypto/content/TokensPage/TokensPage.vue"
+
 export default {
   name: 'ContentBar',
   components: {TokensPage, StatisticsPage, PortfolioPage},
@@ -24,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.contentBar-container {
+.contentBarContainer {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -32,8 +33,7 @@ export default {
 
   .contentBar {
     flex-grow: 1;
-    margin: 2rem 2rem 2rem 1rem;
-    /*background-color: var(--white);*/
+    margin: 2rem 1rem;
   }
 }
 

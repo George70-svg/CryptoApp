@@ -50,7 +50,8 @@ export default {
     justify-content: space-between;
     margin: 2rem 1rem 2rem 2rem;
     background-color: var(--white);
-    border-radius: 20px;
+    border-radius: var(--b-radius-2);
+    box-shadow: var(--primary-shadow);
   }
 
   .navBar-max {

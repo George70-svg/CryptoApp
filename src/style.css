@@ -1,9 +1,8 @@
 body {
+  box-sizing: border-box;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
@@ -48,6 +47,7 @@ h1 {
 
 :root {
   --white: rgb(255, 255, 255);
+  --white-opacity: rgb(255, 255, 255, 0.3);
   --blue: #1890FF;
   --light-blue: #6fb6fa;
   --yellow: #F8D96D;
@@ -85,5 +85,16 @@ h1 {
   --small-shadow: 0 0 4px 0 rgba(0 , 0, 0, 25%);
   --secondary-shadow: 0 0 20px 0 rgba(0 , 0, 0, 25%);
   --half-hor-shadow: 4px 0 20px 0 rgba(0 , 0, 0, 25%);
+}
+
+:root {
+  --b-radius-1: .5rem;
+  --b-radius-2: 1rem;
+  --b-radius-3: 1.5rem;
+  --b-radius-4: 2rem;
+  --b-radius-5: 2.5rem;
+  --b-radius-6: 3rem;
+  --b-radius-7: 3.5rem;
+  --b-radius-8: 4rem;
 }
 

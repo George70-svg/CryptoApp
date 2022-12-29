@@ -26,14 +26,13 @@ export default {
     line-height: 2rem;
     background-color: var(--white);
     box-shadow: var(--small-shadow);
-    border-radius: 1rem;
+    border-radius: var(--b-radius-2);;
     text-align: center;
     cursor: pointer;
     transition: all var(--default-transition);
 
     &:hover {
       box-shadow: var(--primary-shadow);
-      font-weight: 700;
       transition: all var(--default-transition);
     }
   }

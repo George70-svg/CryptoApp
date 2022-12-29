@@ -1,11 +1,11 @@
 <template>
   <div
-      class="logo-container"
-      :class="logoContainerMax ? 'logo-container-max' : 'logo-container-min'"
+      class="logoСontainer"
+      :class="logoContainerMax ? 'logoContainerMax' : 'logoContainerMin'"
+      @click="toggleNavbar"
   >
     <img
       src="src/assets/icons/rocket.png"
-      @click="toggleNavbar"
       alt="rocket logo"
       draggable="false"
     >
@@ -36,15 +36,15 @@ export default {
 
 <style lang="scss" scoped>
 
-.logo-container {
+.logoСontainer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+  cursor: pointer;
 
   img {
     width: 80px;
-    cursor: pointer;
     transition: transform var(--default-transition);
   }
 
@@ -53,14 +53,14 @@ export default {
   }
 }
 
-.logo-container-max {
+.logoContainerMax {
 
   img {
     transform: rotate(0deg);
   }
 }
 
-.logo-container-min {
+.logoContainerMin {
 
   img {
     transform: rotate(90deg);
